@@ -8,14 +8,14 @@ namespace WebAPI.Migrations
     {
         protected override void Up(MigrationBuilder mb)
         {
-            mb.Sql("insert into Categorias(Nome,ImagemUrl) values('Bebidas','bebidas.jpg')");
-            mb.Sql("insert into Categorias(Nome,ImagemUrl) values('Lanches','lanches.jpg')");
-            mb.Sql("insert into Categorias(Nome,ImagemUrl) values('Sobremesas','sobremesas.jpg')");
+            mb.Sql("insert into Categorias(Nome,ImageUrl) values('Bebidas','bebidas.jpg')");
+            mb.Sql("insert into Categorias(Nome,ImageUrl) values('Lanches','lanches.jpg')");
+            mb.Sql("insert into Categorias(Nome,ImageUrl) values('Sobremesas','sobremesas.jpg')");
         }
 
         protected override void Down(MigrationBuilder mb)
         {
-
+            mb.Sql("Delete from Categorias");
         }
     }
 }
